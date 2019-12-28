@@ -1,0 +1,40 @@
+---
+title: 123
+s: 123
+layout: index
+---
+{% for post in paginator.posts %}
+<br>
+<div id = "shang">
+			<div id= "zi">
+				<p id = "p1"><b><i><a href = "{{post.url}}" style="color: black;">{{post.title}}</a></i></b></p>
+				<p id = "w">{{post.excerpt}}</p>
+			</div>
+			
+</div>
+{% endfor %}
+
+<!-- 上一页： {{paginator.previous_page}}<br>
+上一页： {{paginator.previous_page_path}}<br>
+
+下一页： {{paginator.next_page}}<br>
+下一页： {{paginator.next_page_path}}<br> -->
+
+
+{% if paginator.previous_page_path %}
+<a href="{{ paginator.previous_page_path }}" class = "previous" style="font-size: 30px;">🎅上一页</a>
+{% else %}
+<a href="javascript:void(0)" class = "previous" style="font-size: 30px;">🎅上一页</a>
+
+{% endif %}
+
+
+{% if paginator.next_page_path %}
+<a href="{{ paginator.next_page_path }}" class = "next" style="margin-left: 80%;font-size: 30px;">下一页⛄</a>
+{% else %}
+<a href="javascript:void(0)" class = "next" style="margin-left: 80%; font-size: 30px;">下一页⛄</a>
+
+{% endif %}
+
+
+
