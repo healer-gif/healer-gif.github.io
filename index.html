@@ -1,40 +1,417 @@
----
-title: 123
-s: 123
-layout: index
----
-{% for post in paginator.posts %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+		body{
+			width: 100%;
+			height: 1100px;
+			background: url(../public/images/0005018405589460_b.jpg)no-repeat;
+			background-size: 100% 100%;
+			background: rgb(0.2);
+			background-attachment: fixed;
+		}
+		#yi{
+			display: block;
+		}
+
+		#left{
+			width: 23%;
+			height: 1100px;
+			background: rgb(255,255,255,0.5);
+			float: left;
+		}
+
+		#head{
+			width: 100%;
+			height: 300px;
+			background-color: gray;
+			text-align: center;
+		}
+
+		#head img{
+
+			width: 45%;
+			height: 200px;
+			border-radius: 50%;
+			border: 3px solid #FFF;
+			margin-top: 20px;
+
+		}
+
+		#left p{
+			text-align: center;
+			font-size: 40px;
+		}
+
+		#yi ul{
+			text-align: center;
+			margin-top: 50px;
+			line-height: 50px;
+			font-size: 25px;
+		}
+		#er{
+			display: none;
+		}
+		#er ul{
+			text-align: center;
+			margin-top: 50px;
+			line-height: 60px;
+			font-size: 25px;
+			color: #FFF;
+			/*list-style: block;*/
+		}
+		#m{
+			text-align: center;
+			font-size: 40px;
+		}
+		#right{
+			width: 77%;
+			height: 1100px;
+			background-color: red;
+			margin-left: 23%;
+			background: rgb(255,255,255,0.2);
+
+		}
+		#shang{
+			width: 90%;
+			height: 300px;
+			background: rgb(255,255,255,0.3);
+			margin: auto ;
+			border-radius: 30px;
+			position: relative;
+		}
+		#zhong{
+			width: 90%;
+			height: 300px;
+			background: rgb(255,255,255,0.3);
+			margin: auto ;
+			border-radius: 30px;
+			margin-top: 40px;
+			position: relative;
+			
+		}
+		#xia{
+			width: 90%;
+			height: 300px;
+			background: rgb(255,255,255,0.3);
+			margin: auto ;
+			border-radius: 30px;
+			margin-top: 40px;
+			position: relative;
+
+		}
+		#zi,#zi2,#zi3{
+			width: 80%;
+			height: 300px;
+			float: left;
+		}
+		#tu{
+			width: 18%;
+			height: 200px;
+			margin-left: 80%;
+			margin-top: 50px;
+			position: absolute;
+			opacity: 0.8;
+			border-radius: 40px;
+			overflow: hidden;
+		}
+		#tu img{
+			width: 100%;
+			height: 100%;
+			border-radius: 40px;
+			transition: all 1s;
+		}
+		#tu img:hover{
+			transform: scale(1.4);
+		}
+		#tu2{
+			width: 18%;
+			height: 200px;
+			border-radius: 40px;
+			margin-left: 80%;
+			margin-top: 50px;
+			position: absolute;
+			opacity: 0.8;
+			overflow: hidden;
+		}
+		#tu2 img{
+			width: 100%;
+			height: 100%;
+			border-radius: 40px;
+			transition: all 1s;
+		}
+		#tu2 img:hover{
+			transform: scale(1.4);
+		}
+		#tu3{
+			width: 18%;
+			height: 200px;
+			border-radius: 40px;
+			margin-left: 80%;
+			margin-top: 50px;
+			position: absolute;
+			opacity: 0.8;
+			overflow: hidden;
+		}
+		#tu3 img{
+			width: 100%;
+			height: 100%;
+			border-radius: 40px;
+			transition: all 1s;
+		}
+		#tu3 img:hover{
+			transform: scale(1.4);
+		}
+		#p1{
+			font-size: 40px;
+			margin-left: 5%;
+		}
+		#p2{
+			font-size: 27px;
+			line-height: 60px;
+			color: #003366;
+			padding-left: 5%;
+			padding-right: 3%;
+		}
+		#p3{
+			font-size: 27px;
+			line-height: 60px;
+			color: #003366;
+			padding-left: 5%;
+			padding-right: 3%;
+		}
+		#p4{
+			font-size: 27px;
+			line-height: 60px;
+			color: #003366;
+			padding-left: 5%;
+			padding-right: 3%;
+		}
+		button{
+			margin-left:80%;
+			height: 70px;
+			width: 70px;
+			font-size: 30px;
+			border: none;
+			background: rgb(255,255,255,0);
+			outline: none;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id = "left">
+
+
+		<div id = "head">
+			 <button onclick="fn()">🎡</button>
+
+			<img id="img" src="../public/images/null-5612bcb5bffbea56.jpg">
+		</div>
+		<div id = "yi">
+			<p><b>healer</b></p>
+			<p>治愈者</p>
+			<ul>
+				<li>QQ: 1229589852</li>
+				<li>WeChat: srn1999_</li>
+				<li>Phone: 15177730385 </li>
+				<li><a href = "#" style="color: black">🏐主页</a></li>
+				<li><a href = "#" style="color: black">💌留言</a></li>
+				<li><a href = "#" style="color: black">🥚分享</a></li>
+				<li><a href = "#" style="color: black">💨链接</a></li>
+			</ul>
+	    </div>
+	    <div id= "er">
+		    <div id= "m">目录</div>
+		    <ul>
+		    	<li>TFboys</li>
+		    	<li><a href="boke1.html" style="color: #FFF;">Karry</a></li>
+		    	<li>Jackson</li>
+		    	<li>Roy</li>
+		    	<li>Music</li>
+	            <li>Photo</li>
+		    </ul>
+		</div>
+	</div>
+
+	<div id = "right">
+		<!-- <div id = "shang">
+			<div id= "zi">
+				<p id = "p1"><b><i><a href = "boke1.html" style="color: black;">心引力</a></i></b></p>
+				<p id = "p2">&nbsp&nbsp&nbsp&nbsp&nbsp我想这是 心引力的定律  
+	      		   找到你想对你说
+				   在一起我和你 早已慢慢靠近
+				   想和你去南极 想和你看流星
+				   奇怪我怎么还能 想到和你老去
+				   吸引你的注意 让我可以对你说
+				   我爱你这甜蜜 幸福得快窒息
+				   来收藏我的心 倾听我的声音
+				   我跟着你的脚印 倒数四三二一
+				</p>
+			</div>
+			<div id = "tu">
+				<img src="../images/xinyinli.jpg">
+			</div>
+		</div>
+		<div id = "zhong">
+			<div id = "zi2">
+	             <p id = "p1"><b><i>舒适圈</i></b></p>
+	             <p id = "p3">&nbsp&nbsp&nbsp&nbsp&nbsp离开这里 我要离开这里
+						告诉世界 我名字叫千玺
+						房间拥挤 小镇缓慢安静
+						可我的梦 在召唤我飞行
+						去追去闯 去乘风破浪
+						就算鞋很脏 也笑得像国王
+						去疯去狂 去变成星光
+						少年只属于远方
+						往前吧 大闹一场
+				</p>
+			</div>
+			<div id = "tu2">
+				<img src="../images/shushiquan.jpg">
+			</div>
+		</div>
+		<div id = "xia">
+			<div id = "zi3">
+	             <p id = "p1"><b><i>源</i></b></p>
+	             <p id = "p4">&nbsp&nbsp&nbsp&nbsp&nbsp每个人都是一个圆 在原地打转
+						这世界就是一个圆 从不会停下
+						善良的人从不在受伤的时候哭泣
+						只是思念总在某个夜晚弥漫
+						有一些地点
+						还是没法躲过
+						有一些时间
+						已习惯了消磨
+						常会有情绪泛滥的时刻
+						会陷入 灿烂的 疼痛的 漩涡
+				</p>
+			</div>
+			<div id = "tu3">
+				<img src="../images/yuan.jpg">
+			</div>
+		</div> -->
+		
 <br>
 <div id = "shang">
 			<div id= "zi">
-				<p id = "p1"><b><i><a href = "{{post.url}}" style="color: black;">{{post.title}}</a></i></b></p>
-				<p id = "w">{{post.excerpt}}</p>
+				<p id = "p1"><b><i><a href = "/2019/12/26/yi.html" style="color: black;">舒适圈</a></i></b></p>
+				<p id = "w"><p style="font-size: 27px;
+			line-height: 60px;
+			color: black;
+			padding-left: 5%;
+			padding-right: 3%;float: left;
+			">离开这里 我要离开这里 告诉世界 我名字叫千玺 房间拥挤 小镇缓慢安静 可我的梦 在召唤我飞行 去追去闯 去乘风破浪 就算鞋很脏 也笑得像国王 去疯去狂 去变成星光 少年只属于远方 往前吧 大闹一场</p>
+
+<div id="tu2" style="margin-top: 0px;">
+	<img src="/public/images/shushiquan.jpg" />
+</div>
+</p>
 			</div>
 			
 </div>
-{% endfor %}
 
-<!-- 上一页： {{paginator.previous_page}}<br>
-上一页： {{paginator.previous_page_path}}<br>
+<br>
+<div id = "shang">
+			<div id= "zi">
+				<p id = "p1"><b><i><a href = "/2019/12/26/wang.html" style="color: black;">心引力</a></i></b></p>
+				<p id = "w"><p style="font-size: 27px;line-height: 60px;color: #003366;padding-left: 5%;padding-right: 3%;float: left;">我想这是 心引力的定律 找到你想对你说 在一起我和你 早已慢慢靠近 想和你去南极 想和你看流星 奇怪我怎么还能 想到和你老去 吸引你的注意 让我可以对你说 我爱你这甜蜜 幸福得快窒息 来收藏我的心 倾听我的声音 我跟着你的脚印 倒数四三二一</p>
+<div id="tu" style="margin-top: 0px;">
+	<img src="/public/images/xinyinli.jpg" />
+</div>
+</p>
+			</div>
+			
+</div>
 
-下一页： {{paginator.next_page}}<br>
-下一页： {{paginator.next_page_path}}<br> -->
+<br>
+<div id = "shang">
+			<div id= "zi">
+				<p id = "p1"><b><i><a href = "/2019/12/25/yuan.html" style="color: black;">源</a></i></b></p>
+				<p id = "w"><p style="font-size: 27px;line-height: 60px;color: black;padding-left: 5%;padding-right: 3%;float: left; ">每个人都是一个圆 在原地打转 这世界就是一个圆 从不会停下 善良的人从不在受伤的时候哭泣 只是思念总在某个夜晚弥漫 有一些地点 还是没法躲过 有一些时间 已习惯了消磨 常会有情绪泛滥的时刻 会陷入 灿烂的 疼痛的 漩涡</p>
+
+<div id="tu3" style="margin-top: 0px;">
+	<img src="/public/images/yuan.jpg" />
+</div>
+</p>
+			</div>
+			
+</div>
 
 
-{% if paginator.previous_page_path %}
-<a href="{{ paginator.previous_page_path }}" class = "previous" style="font-size: 30px;">🎅上一页</a>
-{% else %}
+<!-- 上一页： <br>
+上一页： <br>
+
+下一页： 2<br>
+下一页： /page2<br> -->
+
+
+
 <a href="javascript:void(0)" class = "previous" style="font-size: 30px;">🎅上一页</a>
 
-{% endif %}
-
-
-{% if paginator.next_page_path %}
-<a href="{{ paginator.next_page_path }}" class = "next" style="margin-left: 80%;font-size: 30px;">下一页⛄</a>
-{% else %}
-<a href="javascript:void(0)" class = "next" style="margin-left: 80%; font-size: 30px;">下一页⛄</a>
-
-{% endif %}
 
 
 
+
+<a href="/page2" class = "next" style="margin-left: 80%;font-size: 30px;">下一页⛄</a>
+
+
+
+
+
+	</div>
+	<script type="text/javascript">		
+		function fn(){
+			var b = document.getElementById('yi');
+			var a = document.getElementById('er');
+			var c = document.getElementsByTagName('button');
+			console.log(b);
+			console.log(c);
+
+			if( b.style.display == 'none'){
+				b.style.display = 'block';
+				a.style.display = 'none'
+
+			}else{
+				b.style.display = 'none';
+				a.style.display = 'block';
+				
+			}	
+		}
+
+		var rotateVal = 0;//旋转角度
+		var InterVal //定时器
+		window.onload = function(){
+			//网页加载完成后即运行rotate函数
+			rotate();
+			//鼠标悬浮在图片上时，停止旋转，即清除定时器
+			document.getElementById('img').onmousemove = function(){
+				clearInterval(InterVal);
+			}
+			//鼠标离开图片时，继续旋转，即停止运行定时器
+			document.getElementById('img').onmouseleave = function(){
+				rotate();
+			}
+		}
+		//设置定时器
+		function rotate(){
+			InterVal =setInterval(function(){
+				var img = document.getElementById('img');
+				rotateVal += 1;
+				//设置旋转属性顺时针
+				img.style.transform = 'rotate('+ rotateVal + 'deg)';
+				//设置旋转时的动画 匀速0.1s
+				img.style.transition = '0.2s linear'
+			},100)
+		}
+	</script>
+	
+</body>
+</html>
